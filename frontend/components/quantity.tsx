@@ -6,7 +6,7 @@ interface Quantity {
 }
 
 const Quantity: FC<Quantity> = (props) => {
-  const INITIAL_COST = 2;
+  const INITIAL_COST = 0.02;
   console.log(props);
 
   const increase = () => {
