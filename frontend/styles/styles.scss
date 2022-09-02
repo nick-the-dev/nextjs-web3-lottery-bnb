@@ -1,0 +1,1258 @@
+a {
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Raleway", sans-serif !important;
+  font-size: inherit !important;
+}
+
+/* Header */
+.header-inner {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+}
+
+.header-menu {
+  display: flex;
+  align-items: center;
+}
+
+.social-link {
+  margin: 0 15px;
+}
+
+.header-link {
+  margin: 0 27px;
+  font-family: "Dosis", sans-serif;
+  font-weight: 500;
+  color: #1d1d1d;
+  font-size: 1.8rem;
+  position: relative;
+  transition: 0.3s;
+}
+
+header {
+  padding: 35px 0;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  background-color: rgba(255, 255, 255, 0.71);
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.header-link::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1d1d1d;
+  transition: 0.3s;
+}
+
+.header-link:hover::before,
+.header-link:focus::before,
+.header-link.active::before {
+  width: 100%;
+}
+
+.social-link path {
+  transition: 0.3s;
+}
+
+.social-link:hover path,
+.social-link:focus path {
+  fill: #5273c8;
+}
+
+.social-link:active path {
+  fill: #214193;
+}
+
+.header-link:active {
+  color: #5273c8;
+}
+
+/* Hero Section */
+.hero {
+  padding-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 200px;
+}
+
+.slogan {
+  color: #555555;
+  font-size: 2.3rem;
+  font-weight: 500;
+  font-style: italic;
+  letter-spacing: 0.69px;
+  margin-bottom: 27px;
+}
+
+.hero .title {
+  margin: 0;
+  line-height: 1.3;
+  font-size: 7.6rem;
+  font-family: "Dosis";
+  background: linear-gradient(90deg, #4543d6, #25e8d6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: table;
+  margin-bottom: 20px;
+}
+
+.hero .subtitle {
+  color: #555555;
+  font-size: 4rem;
+  font-family: "Dosis";
+  font-weight: 500;
+  max-width: 730px;
+  line-height: 1.4;
+  margin-top: 0;
+}
+
+.hero .image {
+  width: 283px;
+  height: 552px;
+  background: #ebebeb;
+  border-radius: 30px;
+}
+
+.hero .left {
+  padding-right: 26px;
+}
+
+.buy-ticket-title {
+  color: #1d1d1d;
+  font-size: 3rem;
+  font-family: "Dosis";
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  line-height: 1.4;
+  margin: 0 0 25px;
+  text-shadow: 0px 2px 4px rgb(0 0 0 / 30%);
+}
+
+.mint-box {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-wrapper {
+  display: flex;
+  align-items: center;
+  margin-right: 25px;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  border: 1px solid #1d1d1d;
+  border-radius: 24px;
+  height: 60px;
+  width: 212px;
+  justify-content: center;
+  margin-right: 25px;
+  padding: 10px 25px;
+}
+
+.cost {
+  font-family: "Dosis";
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #1d1d1d;
+  text-shadow: 0px 2px 4px rgb(0 0 0 / 40%);
+  min-width: 100px;
+  text-align: center;
+}
+
+.quantity button {
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  cursor: pointer;
+}
+
+.quantity .current-value {
+  font-size: 3.4rem;
+  font-family: "Dosis";
+  font-weight: 500;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.progress-bar-wrapper {
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  max-width: 624px;
+}
+
+.progress-bar-wrapper .text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.1rem;
+  font-family: "Dosis";
+  font-weight: 500;
+  letter-spacing: 0.21px;
+}
+
+.hero .title {
+  background: linear-gradient(90deg, #25e8d6, #4543d6, #25e8d6);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animated_text 10s ease-in-out infinite;
+  background-position: 100%;
+  margin: 0;
+  line-height: 1.3;
+  font-size: 7.6rem;
+  font-family: "Dosis";
+  display: table;
+  margin-bottom: 20px;
+}
+
+.mantine-Button-loading {
+  opacity: 0.6;
+}
+
+/* Info Section */
+.card {
+  width: 33.333333%;
+  padding: 0 15px;
+  background: none;
+  border: none;
+  outline: none;
+  color: #1d1d1d;
+}
+
+.cards-wrapper {
+  display: flex;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.card .inner {
+  padding: 16px;
+  border-radius: 24px;
+  position: relative;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 570px;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.info {
+  margin-bottom: 200px;
+}
+
+.card .inner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -1px; /* !importanté */
+  border-radius: 25px; /* !importanté */
+  background: linear-gradient(to bottom, #7ba0ff, #5bcca9);
+  box-shadow: 0 4px 9px 0 rgb(37 232 214 / 20%);
+  transition: 0.6s;
+}
+
+.card .inner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1; /* !importanté */
+  border-radius: 25px; /* !importanté */
+  transition: 0.6s;
+  margin: -2px;
+  background: linear-gradient(to right, #7ba0ff, #5bcca9);
+  box-shadow: 0 4px 9px 0 rgb(37 232 214 / 30%);
+  opacity: 0;
+}
+
+.card:hover .inner::after,
+.card:focus .inner::after {
+  opacity: 1;
+}
+
+.card:hover .inner::before,
+.card:focus .inner::before {
+  opacity: 0;
+}
+
+.card-title {
+  font-family: "Dosis";
+  font-weight: 500;
+  font-size: 4rem;
+  line-height: 1.4;
+  letter-spacing: 1.2px;
+  margin: 0;
+  transition: 0.3s;
+  margin-top: auto;
+}
+
+.card-desc {
+  font-size: 1.8rem;
+  text-align: center;
+  line-height: 1.5;
+  letter-spacing: 0.72px;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.4s ease-in-out;
+}
+
+.card-img-wrapper {
+  margin-top: auto;
+}
+
+.card:hover .card-desc,
+.card:focus .card-desc {
+  max-height: 300px;
+}
+
+.section-title {
+  font-size: 7rem;
+  line-height: 1.4;
+  letter-spacing: 0.7px;
+  font-family: "Dosis";
+  font-weight: 500;
+  background: linear-gradient(90deg, #4543d6, #25e8d6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 0;
+  margin-bottom: 60px;
+}
+
+/* Buy a ticket Section */
+.buy-a-ticket .subtitle {
+  font-family: "Dosis";
+  font-size: 4rem;
+  line-height: 1.4;
+  letter-spacing: 1.2px;
+  color: #1d1d1d;
+  font-weight: 500;
+  margin: 0 0 32px;
+}
+
+.buy-a-ticket p.desc1 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.75px;
+  color: #1d1d1d;
+  margin: 0 0 24px;
+}
+
+.buy-a-ticket .desc2 {
+  font-size: 1.8rem;
+  color: #555555;
+  line-height: 1.5;
+  letter-spacing: 0.72px;
+  margin: 0;
+}
+
+.buy-a-ticket .left {
+  max-width: 710px;
+  padding-right: 26px;
+}
+
+.buy-a-ticket {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 200px;
+}
+
+/* How to play Section */
+.how-to-play .cards-wrapper {
+  flex-direction: column;
+  align-items: center;
+}
+
+.how-to-play .card {
+  width: 100%;
+  margin-bottom: 83px;
+  max-width: 540px;
+  position: relative;
+}
+
+.how-to-play .card .inner {
+  min-height: 346px;
+  padding: 31px;
+}
+
+.how-to-play .title {
+  font-family: "Dosis";
+  font-size: 4rem;
+  font-weight: 500;
+  margin: 0 0 24px;
+  color: #1d1d1d;
+  line-height: 1.4;
+  letter-spacing: 1.2px;
+}
+
+.how-to-play .desc {
+  font-size: 1.8rem;
+  margin: 0;
+  line-height: 1.5;
+  letter-spacing: 0.72px;
+  color: #1d1d1d;
+}
+
+.how-to-play .number {
+  font-family: "Dosis";
+  font-size: 4rem;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: 0.3s;
+  position: absolute;
+  background: transparent;
+  z-index: 2;
+  top: -35px;
+}
+
+.how-to-play .number::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+  z-index: -2;
+  transition: 0.3s;
+  background-image: linear-gradient(to bottom, #7ba0ff 0%, #5bcca9 100%);
+}
+
+.how-to-play .number::after {
+  opacity: 0;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+  z-index: -1;
+  transition: 0.3s;
+  background-image: linear-gradient(128deg, #4543d6 -10%, #25e8d6 105%);
+}
+
+.how-to-play .card:hover .number::after,
+.how-to-play .card:focus .number::after {
+  opacity: 1;
+}
+
+.how-to-play .section-title {
+  margin-bottom: 95px;
+}
+
+/* Roadmap Section */
+.stages-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.stage-row {
+  width: 100%;
+}
+
+.stage {
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+}
+
+.stage .title {
+  font-family: "Dosis";
+  color: #1d1d1d;
+  font-size: 4rem;
+  margin: 0 0 32px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 1.2px;
+}
+
+.stage .desc {
+  color: #1d1d1d;
+  line-height: 1.5;
+  letter-spacing: 0.72px;
+  font-size: 1.8rem;
+  margin: 0;
+  min-height: 189px;
+}
+
+.stage-row:nth-of-type(odd) .stage {
+  margin-left: auto;
+}
+
+.roadmap svg {
+  position: absolute;
+  left: 50%;
+  top: 160px;
+  transform: translateX(-50%);
+}
+
+.roadmap {
+  position: relative;
+  padding-bottom: 200px;
+}
+
+/* The Team Section */
+.the-team .card .inner {
+  min-height: 485px;
+  justify-content: flex-start;
+  padding-top: 40px;
+}
+
+.the-team .img-wrapper {
+  margin-bottom: 19px;
+}
+
+.the-team .letters {
+  font-size: 4rem;
+  margin: 0 0 8px;
+  line-height: 1.4;
+  letter-spacing: 1.2px;
+  font-weight: 500;
+  font-family: "Dosis";
+  color: #1d1d1d;
+}
+
+.the-team .position {
+  color: #555555;
+  font-size: 2.3rem;
+  line-height: 1.4;
+  letter-spacing: 0.69px;
+  font-style: italic;
+  margin-bottom: 24px;
+}
+
+.the-team .desc {
+  color: #1d1d1d;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  letter-spacing: 0.72px;
+}
+
+.the-team {
+  padding-bottom: 200px;
+}
+
+/* Whitelist Section */
+.whitelist-box {
+  background: #5273c8;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 40px 50px;
+}
+
+.whitelist h2,
+.whitelist h3 {
+  font-family: "Dosis";
+  font-size: 4rem;
+  font-weight: 500;
+  color: #fff;
+  line-height: 1.4;
+  letter-spacing: 1.2px;
+  margin: 0;
+  text-align: center;
+}
+
+.whitelist h2 {
+  margin-bottom: 24px;
+}
+
+.whitelist h3 {
+  margin-bottom: 50px;
+}
+
+.whitelist {
+  padding-bottom: 200px;
+}
+
+/* Faq */
+.faq .card {
+  width: 100%;
+  max-width: 821px;
+  padding: 0;
+  margin-top: 17px;
+}
+
+.faq .card .inner {
+  min-height: unset;
+  padding: 16px 32px;
+}
+
+.faq-item {
+  display: flex;
+  margin-bottom: 17px;
+}
+
+.toggle {
+  width: 50px;
+  height: 50px;
+  background: none;
+  border: none;
+  position: relative;
+  padding: 0;
+  cursor: pointer;
+}
+
+.toggle-wrapper {
+  margin-right: 46px;
+}
+
+.faq .question {
+  font-family: "Dosis";
+  font-size: 4rem;
+  line-height: 1.2;
+  letter-spacing: 1.2px;
+  color: #1d1d1d;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.faq .answer {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #1d1d1d;
+  line-height: 1.5;
+  letter-spacing: 0.72px;
+  text-align: left;
+}
+
+.card-wrapper {
+  transition: 0.4s;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 3px 15px;
+}
+
+.toggle::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 36px;
+  height: 2px;
+  background: #1d1d1d;
+  transform: translate(-50%, -50%);
+  transition: 0.3s;
+}
+
+.toggle::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 2px;
+  height: 36px;
+  background: #1d1d1d;
+  transform: translate(-50%, -50%);
+  transition: 0.3s;
+}
+
+.faq-item.open .toggle::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.faq-item.open .card-wrapper {
+  max-height: 200px;
+}
+
+a.btn.signup-btn {
+  border: 1px solid transparent;
+  background-color: #228be6;
+  background-image: #228be6;
+  color: #fff;
+  height: 36px;
+  padding: 0 18px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji,
+    Segoe UI Emoji;
+  -webkit-tap-highlight-color: transparent;
+  display: inline-block;
+  width: auto;
+  border-radius: 4px;
+  font-weight: 600;
+  position: relative;
+  line-height: 1;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #5273c8;
+  border: 4px solid #fff;
+  height: 50px;
+  padding: 7px;
+  border-radius: 24px;
+  font-size: 20px;
+  width: 166px;
+  box-shadow: 0px 4px 9px 0px rgb(69 67 214 / 28%);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+a.btn.signup-btn:hover,
+a.btn.signup-btn:focus {
+  background-color: #4543d6;
+}
+
+/* Footer */
+footer.footer {
+  background: #7ba0ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 47px 15px 30px;
+  margin-top: 200px;
+}
+
+.footer-logo {
+  margin-bottom: 40px;
+}
+
+.copyright {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+@keyframes animated_text {
+  0% {
+    background-position: 100%;
+  }
+  50% {
+    background-position: 200%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+
+@media (max-width: 1100px) {
+  .the-team .card {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+
+  .the-team .cards-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .the-team .card .inner {
+    min-height: 352px;
+  }
+
+  .the-team .img-wrapper {
+    max-width: 90px;
+  }
+
+  .the-team .letters {
+    font-size: 3rem;
+  }
+
+  .the-team .position {
+    font-size: 2rem;
+  }
+
+  .the-team {
+    padding-bottom: 120px;
+  }
+}
+
+@media (max-width: 991px) {
+  .mantine-Button-loading {
+    opacity: 0.6;
+  }
+
+  .header-link {
+    margin: 0 15px;
+  }
+
+  .header-menu ul {
+    padding: 0;
+  }
+
+  header button.mantine-Button-root {
+    font-size: 1.6rem;
+    width: 120px;
+  }
+
+  .social-link {
+    margin: 0 10px;
+  }
+
+  header {
+    padding: 15px 0;
+  }
+
+  .hero .subtitle {
+    font-size: 3rem;
+    max-width: 500px;
+  }
+
+  .progress-bar-wrapper {
+    max-width: 500px;
+    margin-bottom: 30px;
+  }
+
+  .quantity {
+    height: 50px;
+    width: 170px;
+    padding: 10px 15px;
+  }
+
+  .quantity svg {
+    width: 20px;
+  }
+
+  .buy-ticket-wrapper button.mint-button.mantine-Button-root {
+    min-width: 180px;
+    height: 50px;
+    font-size: 2rem;
+  }
+
+  .cost {
+    font-size: 2rem;
+  }
+
+  .hero {
+    padding-top: 40px;
+    padding-bottom: 120px;
+  }
+
+  .hero .title {
+    font-size: 6rem;
+  }
+
+  .buy-ticket-title {
+    font-size: 2.5rem;
+  }
+
+  .card-desc {
+    font-size: 1.6rem;
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  .card-img-wrapper {
+    max-width: 110px;
+  }
+
+  .card-title {
+    font-size: 2.8rem;
+  }
+
+  .card .inner {
+    min-height: 415px;
+  }
+
+  .section-title {
+    font-size: 6rem;
+    margin-bottom: 30px;
+  }
+
+  .info {
+    margin-bottom: 120px;
+  }
+
+  .buy-a-ticket .subtitle {
+    font-size: 3rem;
+    margin: 0 0 20px;
+  }
+
+  .buy-a-ticket p.desc1 {
+    font-size: 2rem;
+  }
+
+  .buy-a-ticket .desc2 {
+    font-size: 1.6rem;
+  }
+
+  .buy-a-ticket svg {
+    max-width: 202px;
+  }
+
+  .buy-a-ticket {
+    padding-bottom: 120px;
+  }
+
+  .buy-a-ticket .left {
+    max-width: 500px;
+  }
+
+  .how-to-play .section-title {
+    margin-bottom: 60px;
+  }
+
+  .how-to-play .card .inner {
+    min-height: 277px;
+  }
+
+  .how-to-play .card {
+    max-width: 400px;
+  }
+
+  .how-to-play {
+    padding-bottom: 37px;
+  }
+
+  .stage {
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .roadmap svg {
+    max-width: 209px;
+    top: 145px;
+    height: auto;
+  }
+
+  .stage .title {
+    font-size: 2rem;
+    margin: 0 0 11px;
+  }
+
+  .stage .desc {
+    font-size: 1.6rem;
+    min-height: unset;
+  }
+
+  .stage-row {
+    min-height: 197px;
+    display: flex;
+    align-items: center;
+  }
+
+  .roadmap {
+    padding-bottom: 120px;
+  }
+
+  .whitelist h2,
+  .whitelist h3 {
+    font-size: 3rem;
+  }
+
+  .whitelist h3 {
+    margin-bottom: 30px;
+  }
+
+  .whitelist-box {
+    padding: 30px 30px 40px;
+  }
+
+  .whitelist {
+    padding-bottom: 120px;
+  }
+
+  .toggle::before {
+    width: 30px;
+  }
+
+  .toggle::after {
+    height: 30px;
+  }
+
+  .toggle-wrapper {
+    margin-right: 23px;
+  }
+
+  .faq .question {
+    font-size: 3rem;
+    padding-top: 6px;
+  }
+
+  .faq .card {
+    max-width: 580px;
+  }
+
+  footer.footer {
+    margin-top: 120px;
+    padding: 25px 10px 25px;
+  }
+
+  .footer-logo {
+    max-width: 80px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header-menu {
+    display: none;
+  }
+
+  .social-link {
+    margin: 0 4px;
+  }
+
+  .header-inner svg {
+    max-width: 50px;
+  }
+
+  .hero .title {
+    font-size: 5rem;
+  }
+
+  .slogan {
+    font-size: 1.8rem;
+  }
+
+  .hero .subtitle {
+    font-size: 2.5rem;
+  }
+
+  .hero {
+    flex-wrap: wrap;
+    padding-bottom: 70px;
+  }
+
+  .hero .left {
+    width: 100%;
+    padding: 0;
+  }
+
+  .hero .right {
+    display: none;
+  }
+
+  .hero .right > span {
+  }
+
+  .progress-bar-wrapper .text {
+    width: 100%;
+    text-align: center;
+    font-size: 1.6rem;
+  }
+
+  .buy-ticket-wrapper {
+  }
+
+  .mint-box {
+    flex-wrap: wrap;
+  }
+
+  .quantity-wrapper {
+    margin: 0 0 20px;
+  }
+
+  .card {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .cards-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .card .inner {
+    min-height: 220px;
+  }
+
+  .info {
+    margin-bottom: 70px;
+  }
+
+  .buy-a-ticket {
+    flex-wrap: wrap;
+    padding-bottom: 70px;
+  }
+
+  .section-title {
+    font-size: 5rem;
+    margin-bottom: 20px;
+  }
+
+  .buy-a-ticket .right {
+    display: none;
+  }
+
+  .how-to-play .title {
+    font-size: 3rem;
+  }
+
+  .how-to-play .desc {
+    font-size: 1.6rem;
+  }
+
+  .how-to-play .card .inner {
+    min-height: unset;
+  }
+
+  .how-to-play .number {
+    width: 50px;
+    height: 50px;
+    font-size: 2.5rem;
+  }
+
+  .how-to-play {
+    padding-bottom: 0;
+  }
+
+  .how-to-play .card:last-of-type {
+    margin-bottom: 70px;
+  }
+
+  .roadmap {
+    padding-bottom: 70px;
+  }
+
+  .mantine-Container-root {
+    width: 90%;
+  }
+
+  .buy-ticket-wrapper button.mint-button.mantine-Button-root {
+    min-width: 170px;
+  }
+
+  .the-team .card {
+    width: 100%;
+  }
+
+  .the-team .desc {
+    font-size: 1.6rem;
+  }
+
+  .the-team .card .inner {
+    min-height: unset;
+  }
+
+  .the-team {
+    padding-bottom: 70px;
+  }
+
+  .whitelist h2,
+  .whitelist h3 {
+    font-size: 2.5rem;
+  }
+
+  .whitelist .mantine-Button-root {
+    font-size: 1.8rem;
+    width: 140px;
+  }
+
+  .whitelist {
+    padding-bottom: 70px;
+  }
+
+  .faq-item.open .card-wrapper {
+    max-height: 260px;
+  }
+
+  .toggle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .toggle::before {
+    width: 24px;
+  }
+
+  .toggle::after {
+    height: 24px;
+  }
+
+  .faq .question {
+    font-size: 2.2rem;
+  }
+
+  .faq .answer {
+    font-size: 1.5rem;
+  }
+
+  .faq .card .inner {
+    padding: 15px 20px;
+  }
+
+  footer.footer {
+    margin-top: 70px;
+  }
+
+  .quantity .current-value {
+    font-size: 2.5rem;
+  }
+
+  .roadmap svg {
+    opacity: 0.2;
+    top: 108px;
+  }
+
+  .stage .desc {
+    font-size: 1.5rem;
+  }
+
+  .stage .title {
+    font-weight: 600;
+  }
+
+  @supports (-webkit-touch-callout: none) {
+    .hero .title {
+      color: #4543d6;
+      background: none;
+      animation: none;
+      -webkit-text-fill-color: unset;
+    }
+  }
+}

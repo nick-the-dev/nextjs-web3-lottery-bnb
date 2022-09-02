@@ -1,0 +1,23 @@
+{
+  "name": "NFTLoottery #7",
+  "description": "You're the WINNER! The prize is in your wallet :)",
+  "image": "ipfs://QmPsnLHPy8j3XjFXZTbKz6DfYFqB3sY9aAn3fqUX4jCjsX/7.png",
+  "edition": 7,
+  "attributes": [
+    [
+      {
+        "trait_type": "average color",
+        "value": "rgb(113,184,211)"
+      },
+      {
+        "trait_type": "What is this?",
+        "value": "NOT a Hot Dog"
+      },
+      {
+        "trait_type": "date",
+        "value": 1701
+      }
+    ]
+  ],
+  "compiler": "HashLips Art Engine"
+}
