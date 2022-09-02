@@ -1,22 +1,31 @@
-import { FC } from "react"
+import { FC } from "react";
 
 const BuyATicket: FC = () => {
   return (
     <section className="buy-a-ticket" id="buy-a-ticket">
       <div className="left">
         <h2 className="section-title">Buy a ticket</h2>
-        <h3 className="subtitle">WE PRESENT OUR FIRST COLLECTION OF 100 RARE NFT TICKETS</h3>
+        <h3 className="subtitle">
+          WE PRESENT OUR FIRST COLLECTION OF 100 RARE NFT TICKETS
+        </h3>
         <p className="desc1">
-          Each ticket gives you a chance to win the main prize - 100 MATIC (~100$). And also allows you to participate
-          in all future raffles. Simple, fair and most importantly entertaining! Every next round supply ×2
+          Each ticket gives you a chance to win the main prize - 1 BNB (~100$).
+          And also allows you to participate in all future raffles. Simple, fair
+          and most importantly entertaining! Every next round supply ×2
         </p>
         <p className="desc2">
-          When all tickets are sold out, the winner is selected randomly. The winner’s ticket turns gold and 100 MATIC
-          transfers to the winners’ wallet.
+          When all tickets are sold out, the winner is selected randomly. The
+          winner’s ticket turns gold and 1 BNB transfers to the winners’ wallet.
         </p>
       </div>
       <div className="right">
-        <svg width="248" height="495" viewBox="0 0 248 495" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg
+          width="248"
+          height="495"
+          viewBox="0 0 248 495"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
           <path
             fillRule="evenodd"
             clipRule="evenodd"
@@ -36,7 +45,10 @@ const BuyATicket: FC = () => {
             fill="#29D9D7"
             fillOpacity="0.73"
           />
-          <path d="M64.3889 180.838H72.2353V178.774H66.9804V169.719L64.3889 168.273V180.838Z" fill="white" />
+          <path
+            d="M64.3889 180.838H72.2353V178.774H66.9804V169.719L64.3889 168.273V180.838Z"
+            fill="white"
+          />
           <path
             d="M83.5207 181C86.7706 181 89.2604 178.791 89.2604 174.917C89.2604 171.043 86.7706 168.834 83.5207 168.834C80.2528 168.834 77.781 171.043 77.781 174.917C77.781 178.774 80.2528 181 83.5207 181ZM83.5207 171.049C85.4 171.049 86.6329 172.408 86.6329 174.917C86.6329 177.427 85.4 178.785 83.5207 178.785C81.6354 178.785 80.4085 177.427 80.4085 174.917C80.4085 172.408 81.6354 171.049 83.5207 171.049Z"
             fill="white"
@@ -91,7 +103,7 @@ const BuyATicket: FC = () => {
         </svg>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default BuyATicket
+export default BuyATicket;

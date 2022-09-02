@@ -1,8 +1,8 @@
-import { FC, useEffect } from "react"
-import Card from "../card"
+import { FC, useEffect } from "react";
+import Card from "../card";
 
 function openFaqItem(e: any) {
-  e.currentTarget.classList.toggle("open")
+  e.currentTarget.classList.toggle("open");
 }
 
 const Faq: FC = () => {
@@ -19,9 +19,10 @@ const Faq: FC = () => {
             <div className="card-wrapper">
               <Card>
                 <p className="answer">
-                  NFT Loottery provides holders with unique opportunities to benefit from the global transition of
-                  lottery business. NFT Loottery collection features 100 tokens, all randomly generated and equipped
-                  with its own metadata.
+                  NFT Loottery provides holders with unique opportunities to
+                  benefit from the global transition of lottery business. NFT
+                  Loottery collection features 100 tokens, all randomly
+                  generated and equipped with its own metadata.
                 </p>
               </Card>
             </div>
@@ -36,8 +37,8 @@ const Faq: FC = () => {
             <div className="card-wrapper">
               <Card>
                 <p className="answer">
-                  Each NFT allows holders to play, invest, exchange and join the contest with high rewards! Each
-                  Loottery NFT is 100% unique.
+                  Each NFT allows holders to play, invest, exchange and join the
+                  contest with high rewards! Each Loottery NFT is 100% unique.
                 </p>
               </Card>
             </div>
@@ -52,8 +53,9 @@ const Faq: FC = () => {
             <div className="card-wrapper">
               <Card>
                 <p className="answer">
-                  You need MATIC (Polygon Network) to make a purchase, and you can buy it on many cryptocurrency
-                  exchanges. You need to install the MetaMask plugin to buy Loottery NFT.
+                  You need BNB (Binance Smart Chain Network) to make a purchase,
+                  and you can buy it on many cryptocurrency exchanges. You need
+                  to install the MetaMask plugin to buy Loottery NFT.
                 </p>
               </Card>
             </div>
@@ -67,7 +69,7 @@ const Faq: FC = () => {
             <div className="question">How much does it cost?</div>
             <div className="card-wrapper">
               <Card>
-                <p className="answer">Each ticket is worth 2 MATIC.</p>
+                <p className="answer">Each ticket is worth 0.02 BNB.</p>
               </Card>
             </div>
           </div>
@@ -81,7 +83,8 @@ const Faq: FC = () => {
             <div className="card-wrapper">
               <Card>
                 <p className="answer">
-                  All NFTs are algorithmically-generated. We use Chainlink VRF as a source of randomness.
+                  All NFTs are algorithmically-generated. We use Chainlink VRF
+                  as a source of randomness.
                 </p>
               </Card>
             </div>
@@ -96,7 +99,8 @@ const Faq: FC = () => {
             <div className="card-wrapper">
               <Card>
                 <p className="answer">
-                  The winner’s ticket turns gold and 100 MATIC transfers to the winners’ wallet automatically.
+                  The winner’s ticket turns gold and 1 BNB transfers to the
+                  winners’ wallet automatically.
                 </p>
               </Card>
             </div>
@@ -111,7 +115,9 @@ const Faq: FC = () => {
             <div className="card-wrapper">
               <Card>
                 <p className="answer">
-                  {"If you can't win the first raffle, you'll have a chance to participate in all future ones!"}
+                  {
+                    "If you can't win the first raffle, you'll have a chance to participate in all future ones!"
+                  }
                 </p>
               </Card>
             </div>
@@ -119,7 +125,7 @@ const Faq: FC = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Faq
+export default Faq;

@@ -20,7 +20,7 @@ const Hero: FC<HeroProps> = (props: any) => {
           </div>
           <h2 className="subtitle">
             {
-              "Limited offer: don't miss the opportunity to easily win 1 ИТИ (~300$)"
+              "Limited offer: don't miss the opportunity to easily win 1 BNB (~300$)"
             }
           </h2>{" "}
           {/* Maybe pull here updated price of 1ETH */}

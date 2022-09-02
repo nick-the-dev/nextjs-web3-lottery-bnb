@@ -1,5 +1,5 @@
-import { FC } from "react"
-import Card from "../card"
+import { FC } from "react";
+import Card from "../card";
 
 const HowToPlay: FC = () => {
   return (
@@ -9,7 +9,7 @@ const HowToPlay: FC = () => {
         <Card>
           <div className="number">1</div>
           <h3 className="title">Buy NFT ticket</h3>
-          <p className="desc">The price is only 2 MATIC.</p>
+          <p className="desc">The price is only 0.02 BNB.</p>
         </Card>
         <Card>
           <div className="number">2</div>
@@ -20,13 +20,14 @@ const HowToPlay: FC = () => {
           <div className="number">3</div>
           <h3 className="title">Result</h3>
           <p className="desc">
-            As soon as the last ticket is bought, the smart contract will conduct a drawing via the Chainlink, and the
-            lucky winner gets the money to his wallet.
+            As soon as the last ticket is bought, the smart contract will
+            conduct a drawing via the Chainlink, and the lucky winner gets the
+            money to his wallet.
           </p>
         </Card>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default HowToPlay
+export default HowToPlay;
