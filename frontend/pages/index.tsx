@@ -1,27 +1,32 @@
-import type { NextPage } from "next"
-import Layout from "../components/layout"
-import Hero from "../components/sections/hero"
-import Info from "../components/sections/info"
-import BuyATicket from "../components/sections/buy-a-ticket"
-import HowToPlay from "../components/sections/how-to-play"
-import Roadmap from "../components/sections/roadmap"
-import TheTeam from "../components/sections/the-team"
-import Whitelist from "../components/sections/whitelist"
-import Faq from "../components/sections/faq"
+import type { NextPage } from "next";
+import Layout from "../components/layout";
+import Hero from "../components/sections/hero";
+import Info from "../components/sections/info";
+import BuyATicket from "../components/sections/buy-a-ticket";
+import HowToPlay from "../components/sections/how-to-play";
+import Roadmap from "../components/sections/roadmap";
+import TheTeam from "../components/sections/the-team";
+import Whitelist from "../components/sections/whitelist";
+import Faq from "../components/sections/faq";
 // import { Text, Title, Anchor, Button, Group, Badge, Box, useMantineTheme } from "@mantine/core"
 // // import { Code, Rocket } from "tabler-icons-react"
 // import Link from "next/link"
-import { useWalletContext } from "../context/wallet.context"
-import { useCallback, useEffect, useMemo, useState } from "react"
-import { notify, notifyError, notifyTransaction, notifyTransactionUpdate } from "../utils/notify"
-import { truncateAddress } from "../utils/utility"
-import { BigNumber, ethers, EventFilter } from "ethers"
-import { formatUnits, parseUnits } from "ethers/lib/utils"
+import { useWalletContext } from "../context/wallet.context";
+import { useCallback, useEffect, useMemo, useState } from "react";
+import {
+  notify,
+  notifyError,
+  notifyTransaction,
+  notifyTransactionUpdate,
+} from "../utils/notify";
+import { truncateAddress } from "../utils/utility";
+import { BigNumber, ethers, EventFilter } from "ethers";
+import { formatUnits, parseUnits } from "ethers/lib/utils";
 
 const Home: NextPage = () => {
-  const { wallet } = useWalletContext()
+  const { wallet } = useWalletContext();
 
-  const contractAddress = "0x16DE09F47f8806CAc71cE52c0f7843115a4a1cad"
+  const contractAddress = "0x16DE09F47f8806CAc71cE52c0f7843115a4a1cad";
   const contract_abi = [
     {
       inputs: [
@@ -887,75 +892,85 @@ const Home: NextPage = () => {
       stateMutability: "view",
       type: "function",
     },
-  ]
-  const [maxSupply, setMaxSupply] = useState(0)
-  const [totalSupply, setTotalSupply] = useState(0)
-  const [cost, setCost] = useState(0)
-  const [quantity, setQuantity] = useState(1)
+  ];
+  const [maxSupply, setMaxSupply] = useState(0);
+  const [totalSupply, setTotalSupply] = useState(0);
+  const [cost, setCost] = useState(0);
+  const [quantity, setQuantity] = useState(1);
 
   // wallet related effects
   useEffect(() => {
     //const url = "https://eth-rinkeby.alchemyapi.io/v2/BWP8TvvwGIYSCHi0mmDG3zzw-RDcrDJQ"
     const provider = new ethers.providers.JsonRpcProvider(
-      "https://polygon-mainnet.g.alchemy.com/v2/CtDjZWFwODfqLeLLEhLHqCMZGgQb4Ofy"
-    )
-    const signer = provider.getSigner("0xF602B29A694D033FF4811FB8BF5A40F60180ECA5") //Fake address
-    let contract = new ethers.Contract(contractAddress, contract_abi, signer)
+      "https://bsc-dataseed.binance.org/",
+    );
+    const signer = provider.getSigner(
+      "0xF602B29A694D033FF4811FB8BF5A40F60180ECA5",
+    ); //Fake address
+    let contract = new ethers.Contract(contractAddress, contract_abi, signer);
 
     //if (!contract || !wallet) return
     //Get max supply
     contract.maxSupply().then(
       (maxSupply: any) => console.log(setMaxSupply(maxSupply.toNumber())),
-      (e: any) => notifyError(e, "maxSupply")
-    )
+      (e: any) => notifyError(e, "maxSupply"),
+    );
 
     //Get total supply
     contract.totalSupply().then(
       (totalSupply: any) => console.log(setTotalSupply(totalSupply.toNumber())),
-      (e: any) => notifyError(e, "totalSupply")
-    )
+      (e: any) => notifyError(e, "totalSupply"),
+    );
 
     //Get cost for ticket
     contract.cost().then(
       (cost: any) => console.log(setCost(cost)),
-      (e: any) => notifyError(e, "cost")
-    )
-  }, [wallet])
+      (e: any) => notifyError(e, "cost"),
+    );
+  }, [wallet]);
 
   const handleMint = async (quantity: any) => {
-    const { ethereum } = window
-    const provider = new ethers.providers.Web3Provider(ethereum)
-    const newSigner = provider.getSigner()
-    const connectedContract = new ethers.Contract(contractAddress, contract_abi, newSigner)
+    const { ethereum } = window;
+    const provider = new ethers.providers.Web3Provider(ethereum);
+    const newSigner = provider.getSigner();
+    const connectedContract = new ethers.Contract(
+      contractAddress,
+      contract_abi,
+      newSigner,
+    );
 
     try {
-      console.log(cost)
-      const currentCost: any = ethers.utils.formatEther(cost)
-      console.log(currentCost)
-      const costToPay = quantity * currentCost
-      console.log(costToPay)
-      console.log((quantity * currentCost).toString())
+      console.log(cost);
+      const currentCost: any = ethers.utils.formatEther(cost);
+      console.log(currentCost);
+      const costToPay = quantity * currentCost;
+      console.log(costToPay);
+      console.log((quantity * currentCost).toString());
       const tx = await connectedContract.mint(quantity, {
         value: ethers.utils.parseEther((quantity * currentCost).toString()),
-      })
-      const nid = notifyTransaction(tx)
+      });
+      const nid = notifyTransaction(tx);
       try {
-        await tx.wait()
-        notifyTransactionUpdate(nid, `Minted ${quantity} NFT!`, "success")
-        return true
+        await tx.wait();
+        notifyTransactionUpdate(nid, `Minted ${quantity} NFT!`, "success");
+        return true;
       } catch (e: any) {
-        notifyTransactionUpdate(nid, `Failed transfer.`, "error")
-        notifyError(e)
+        notifyTransactionUpdate(nid, `Failed transfer.`, "error");
+        notifyError(e);
       }
     } catch (e: any) {
-      notifyError(e)
+      notifyError(e);
     }
-  }
+  };
 
   return (
     <Layout>
       <>
-        <Hero maxSupply={maxSupply} totalSupply={totalSupply} handleMint={handleMint} />
+        <Hero
+          maxSupply={maxSupply}
+          totalSupply={totalSupply}
+          handleMint={handleMint}
+        />
         <Info />
         <BuyATicket />
         <HowToPlay />
@@ -965,7 +980,7 @@ const Home: NextPage = () => {
         <Faq />
       </>
     </Layout>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

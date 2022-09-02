@@ -77,15 +77,15 @@ header {
 
 .social-link:hover path,
 .social-link:focus path {
-  fill: #5273c8;
+  fill: #eec637;
 }
 
 .social-link:active path {
-  fill: #214193;
+  fill: #ed9135;
 }
 
 .header-link:active {
-  color: #5273c8;
+  color: #ed9135;
 }
 
 /* Hero Section */
@@ -221,7 +221,7 @@ header {
 }
 
 .hero .title {
-  background: linear-gradient(90deg, #25e8d6, #4543d6, #25e8d6);
+  background: linear-gradient(90deg, #eec637, #ed9135, #eec637);
   background-size: 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -282,8 +282,8 @@ header {
   z-index: -1;
   margin: -1px; /* !importanté */
   border-radius: 25px; /* !importanté */
-  background: linear-gradient(to bottom, #7ba0ff, #5bcca9);
-  box-shadow: 0 4px 9px 0 rgb(37 232 214 / 20%);
+  background: linear-gradient(to bottom, #ed9135, #eec637);
+  box-shadow: 0px 4px 9px 0px rgb(214 153 67 / 28%);
   transition: 0.6s;
 }
 
@@ -298,8 +298,8 @@ header {
   border-radius: 25px; /* !importanté */
   transition: 0.6s;
   margin: -2px;
-  background: linear-gradient(to right, #7ba0ff, #5bcca9);
-  box-shadow: 0 4px 9px 0 rgb(37 232 214 / 30%);
+  background: linear-gradient(to right, #ed9135, #eec637);
+  box-shadow: 0px 4px 9px 0px rgb(214 153 67 / 38%);
   opacity: 0;
 }
 
@@ -349,7 +349,7 @@ header {
   letter-spacing: 0.7px;
   font-family: "Dosis";
   font-weight: 500;
-  background: linear-gradient(90deg, #4543d6, #25e8d6);
+  background: linear-gradient(90deg, #ed9135, #eec637);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-top: 0;
@@ -459,7 +459,7 @@ header {
   border-radius: 50%;
   z-index: -2;
   transition: 0.3s;
-  background-image: linear-gradient(to bottom, #7ba0ff 0%, #5bcca9 100%);
+  background-image: linear-gradient(to bottom, #ed9135 0%, #eec637 100%);
 }
 
 .how-to-play .number::after {
@@ -474,7 +474,7 @@ header {
   border-radius: 50%;
   z-index: -1;
   transition: 0.3s;
-  background-image: linear-gradient(128deg, #4543d6 -10%, #25e8d6 105%);
+  background-image: linear-gradient(128deg, #ed9135 -10%, #eec637 105%);
 }
 
 .how-to-play .card:hover .number::after,
@@ -580,7 +580,7 @@ header {
 
 /* Whitelist Section */
 .whitelist-box {
-  background: #5273c8;
+  background: #f2ad69;
   border-radius: 24px;
   display: flex;
   flex-direction: column;
@@ -706,15 +706,15 @@ header {
 
 a.btn.signup-btn {
   border: 1px solid transparent;
-  background-color: #228be6;
-  background-image: #228be6;
+  background-color: #eec637;
+  background-image: #eec637;
   color: #fff;
   height: 36px;
   padding: 0 18px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji,
-    Segoe UI Emoji;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica,
+    Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   -webkit-tap-highlight-color: transparent;
   display: inline-block;
   width: auto;
@@ -736,14 +736,14 @@ a.btn.signup-btn {
   -ms-appearance: none;
   appearance: none;
   -webkit-appearance: none;
-  background-color: #5273c8;
+  background-color: #eec637;
   border: 4px solid #fff;
   height: 50px;
   padding: 7px;
   border-radius: 24px;
   font-size: 20px;
   width: 166px;
-  box-shadow: 0px 4px 9px 0px rgb(69 67 214 / 28%);
+  box-shadow: 0px 4px 9px 0px rgb(214 153 67 / 28%);
   -webkit-transition: 0.3s;
   transition: 0.3s;
   text-align: center;
@@ -754,12 +754,12 @@ a.btn.signup-btn {
 
 a.btn.signup-btn:hover,
 a.btn.signup-btn:focus {
-  background-color: #4543d6;
+  background-color: #ed9135;
 }
 
 /* Footer */
 footer.footer {
-  background: #7ba0ff;
+  background: #ed9135;
   display: flex;
   align-items: center;
   justify-content: center;

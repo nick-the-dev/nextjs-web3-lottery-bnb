@@ -1,24 +1,24 @@
-import { Button } from "@mantine/core"
-import { FC, useState } from "react"
-import { useWalletContext } from "../../context/wallet.context"
+import { Button } from "@mantine/core";
+import { FC, useState } from "react";
+import { useWalletContext } from "../../context/wallet.context";
 
 const MintButton: FC = (props: any) => {
-  const { disconnectWallet, connectWallet, wallet } = useWalletContext()
-  const [isLoading, setIsLoading] = useState(false)
-  const quantity = props.quantity
-  const setQuantity = props.setQuantity
+  const { disconnectWallet, connectWallet, wallet } = useWalletContext();
+  const [isLoading, setIsLoading] = useState(false);
+  const quantity = props.quantity;
+  const setQuantity = props.setQuantity;
 
   const mint = (quantity: any) => {
-    setIsLoading(true)
+    setIsLoading(true);
     props
       .handleMint(quantity)
       .then((res: any) => {
-        setIsLoading(false)
+        setIsLoading(false);
       })
       .catch((err: any) => {
-        console.log(err)
-      })
-  }
+        console.log(err);
+      });
+  };
 
   return (
     <Button
@@ -35,7 +35,7 @@ const MintButton: FC = (props: any) => {
           fontSize: 25,
           width: "auto",
           minWidth: 255,
-          boxShadow: "0px 4px 9px 0px rgba(69, 67, 214, 0.28)",
+          boxShadow: "0px 4px 9px 0px rgb(214 153 67 / 28%)",
           transition: "0.3s",
           background: "none!important",
           position: "relative",
@@ -50,7 +50,7 @@ const MintButton: FC = (props: any) => {
             position: "absolute",
             top: 0,
             left: 0,
-            background: "linear-gradient(100deg, #4543d6 -18%, #25e8d6 109%)",
+            background: "linear-gradient(100deg, #ed9135 -18%, #eec637 109%)",
             transition: "0.3s",
             zIndex: -1,
           },
@@ -64,7 +64,7 @@ const MintButton: FC = (props: any) => {
             position: "absolute",
             top: 0,
             left: 0,
-            background: "linear-gradient(to bottom, #7ba0ff 0%, #5bcca9 100%)",
+            background: "linear-gradient(to bottom, #ed9135 0%, #eec637 100%)",
             transition: "0.3s",
             opcaity: 0,
             zIndex: -2,
@@ -76,7 +76,7 @@ const MintButton: FC = (props: any) => {
 
           "&:hover::after": {
             opacity: 1,
-            background: "linear-gradient(to bottom, #7ba0ff 0%, #5bcca9 100%)",
+            background: "linear-gradient(to bottom, #ed9135 0%, #eec637 100%)",
           },
         },
 
@@ -87,7 +87,7 @@ const MintButton: FC = (props: any) => {
     >
       {wallet ? "Mint" : "Connect Wallet"}
     </Button>
-  )
-}
+  );
+};
 
-export default MintButton
+export default MintButton;
