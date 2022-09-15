@@ -37,7 +37,7 @@ const Hero: FC<HeroProps> = (props: any) => {
       </div>
       <div className="right">
         <Image
-          src="/assets/hero-ticket.png"
+          src="/assets/hero-ticket.jpg"
           width={283}
           height={552}
           alt="Lottery Ticket"
