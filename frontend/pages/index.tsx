@@ -22,6 +22,7 @@ import {
 import { truncateAddress } from "../utils/utility";
 import { BigNumber, ethers, EventFilter } from "ethers";
 import { formatUnits, parseUnits } from "ethers/lib/utils";
+import Particle from "../components/particle";
 
 const Home: NextPage = () => {
   const { wallet } = useWalletContext();
@@ -966,6 +967,7 @@ const Home: NextPage = () => {
   return (
     <Layout>
       <>
+        <Particle />
         <Hero
           maxSupply={maxSupply}
           totalSupply={totalSupply}

@@ -546,16 +546,30 @@ header {
 
 .the-team .img-wrapper {
   margin-bottom: 19px;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 143px;
+  height: 143px;
+  position: relative;
 }
 
 .the-team .letters {
-  font-size: 4rem;
+  font-size: 3.5rem;
   margin: 0 0 8px;
-  line-height: 1.4;
   letter-spacing: 1.2px;
   font-weight: 500;
   font-family: "Dosis";
   color: #1d1d1d;
+}
+
+.the-team .img-wrapper span {
+  position: absolute;
+  width: 130% !important;
+  height: 130% !important;
+  max-width: unset !important;
+  left: 50%;
+  top: 64%;
+  transform: translate(-50%, -50%);
 }
 
 .the-team .position {
@@ -801,10 +815,6 @@ footer.footer {
 
   .the-team .card .inner {
     min-height: 352px;
-  }
-
-  .the-team .img-wrapper {
-    max-width: 90px;
   }
 
   .the-team .letters {
